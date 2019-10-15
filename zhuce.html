@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>用户注册页面</title>
+	<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="css/bootstrap-4.0.0.css" rel="stylesheet">
+	
+	<!--清除浏览器中的缓存-->
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<meta http-equiv="Expires" content="0">
+
+<!-- 612wjw.club Baidu tongji analytics -->
+<script>
+var _hmt = _hmt || [];
+(function() {
+var hm = document.createElement("script");
+hm.src = "https://hm.baidu.com/hm.js?60adccec1072e9d294e54d7933800d4d";
+var s = document.getElementsByTagName("script")[0];
+s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</head>
+<body class="container text-center">
+<form style="margin-top: 200px" action="zhuce.php" method="post">
+	<div class="form-group">
+		<label for="user" style="display:inline;">帐 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;户：</label>
+		<input type="text" id="user" class="form-control" style="display: inline;width: 200px" name="username" placeholder="请输入注册账号"/>
+	</div>
+	<div class="form-group">
+		<label for="password" style="display: inline;">密 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码：</label>
+		<input type="password" id="password" class="form-control" style="display: inline;width: 200px" name="password" placeholder="请输入密码"/>
+	</div>
+	<div class="form-group">
+		<label for="confirm" style="display: inline;">确认密码：</label>
+		<input type="password" id="confirm" class="form-control" style="display: inline;width: 200px" name="confirm" placeholder="请再次输入密码"/>
+	</div>
+	<div class="form-group">
+		<label for="email" style="display: inline;">邮 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱：</label>
+		<input type="text" id="email" class="form-control" style="display: inline;width: 200px" name="email" placeholder="请输入邮箱"/>
+	</div>
+	<div class="form-group">
+		<label for="code" style="display: inline;">验&nbsp;&nbsp;证&nbsp;&nbsp;码：</label>
+		<input type="text" id="code" class="form-control" style="display: inline;width: 100px" name="code" size="4" style="float:left" placeholder="验证码"/>
+		<a href="javascript:;" onclick="document.getElementById('captcha_img').src='captcha.php?r='+Math.random()">
+			<img id="captcha_img" border='1' src='captcha.php?r=echo rand(); ?>' style="width:100px; height:30px"/>
+		</a>
+	</div>
+	<div>
+		<button type="submit" class="btn btn-primary">注 &nbsp;&nbsp;&nbsp;册</button>
+	</div>
+</form>
+
+<footer class="text-center">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<p>
+				<div class="text-center">
+					<input type="button" class="btn btn-primary" value="点击留言"
+					       onclick="window.open('liuyanban.html')">
+				</div>
+				</p>
+				<p>Copyright © 2019-5 &nbsp; <a href="http://www.612wjw.club">时尚花都</a> &nbsp;版权所有|<a href="http://www.beian.miit.gov.cn/">豫ICP备18038153号-1</a></p>
+			</div>
+		</div>
+	</div>
+</footer>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap-4.0.0.js"></script>
+</body>
